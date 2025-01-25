@@ -1,0 +1,2 @@
+[togaev]
+192.168.100.32 ansible_ssh_user=user ansible_sudo_pass=12345678

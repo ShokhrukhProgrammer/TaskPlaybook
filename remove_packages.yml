@@ -1,0 +1,24 @@
+- name: Remove installed packages from remote host
+  hosts: togaev
+  become: true
+
+  tasks:
+    - name: Remove cmatrix
+      apt:
+        name: cmatrix
+        state: absent
+
+    - name: Remove cowsay
+      apt:
+        name: cowsay
+        state: absent
+
+    - name: Remove sl
+      apt:
+        name: sl
+        state: absent
+
+    - name: Autoremove unnecessary packages
+      apt:
+        autoremove: yes
+        purge: yes
